@@ -1,0 +1,8 @@
+{
+  "name": "gameofthrones",
+  "app_id": "584d4a47",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
