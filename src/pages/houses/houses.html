@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Houses
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="isInit" class="housesContent">
+    <h2>COucou</h2>
+    <div *ngFor="let house of houses">
+      <button ion-button full color="light">{{ house.name }}</button>
+    </div>
+    <div class="housesBottom">
+      <button ion-button full color="danger" (click)="previousPage()" [disabled]="apiPageNum == 1">Previous</button>
+      <button ion-button full color="danger" (click)="nextPage()">Next</button>
+    </div>
+  </div>
+</ion-content>
