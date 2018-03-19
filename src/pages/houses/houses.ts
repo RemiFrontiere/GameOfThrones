@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { HousePage } from '../house/house';
 
 // import { House } from '../../app/components/House/house';
 
@@ -42,6 +43,13 @@ export class HousesPage {
         console.log(err);
     }   );
   }
+
+  public loadPageHouse(houseDatas:any):void{
+    this.navCtrl.push(HousePage,{
+        houseDatas:houseDatas
+      });
+  }
+
 
   public nextPage():void{
     if(this.apiPageNum){
