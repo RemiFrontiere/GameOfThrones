@@ -2,4 +2,10 @@
   position: relative;
   height: 100%;
   width: 100%;
+
+  .iframe-placeholder {
+    background:url(../../assets/loader.gif) center center no-repeat;
+    position: relative;
+    height: 70%;
+ }
 }

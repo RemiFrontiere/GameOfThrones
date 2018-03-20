@@ -7,7 +7,12 @@
 </ion-header>
 
 <ion-content padding>
-  <div  class="houseContent">
-    <iframe  height="100%" width="100%" src="http://awoiaf.westeros.org/index.php/House_Ball"></iframe>
+  <div *ngIf="isInit" class="houseContent">
+
+    <button ion-button icon-left full color="danger" (click)="showWebView = !showWebView">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+      Show Wiki
+    </button>
+    <iframe class="iframe-placeholder" *ngIf="showWebView" height="100%" width="100%" [src]="getHouseURL()"></iframe>
   </div>
 </ion-content>

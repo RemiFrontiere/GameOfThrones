@@ -7,6 +7,9 @@
 </ion-header>
 
 <ion-content padding>
+  <div *ngIf="!isInit" class="housesContentLoader">
+    <img src="../../assets/loader.gif" alt="">
+  </div>
   <div *ngIf="isInit" class="housesContent">
     <h2>COucou</h2>
     <div *ngFor="let house of houses">
